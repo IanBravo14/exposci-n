@@ -1,0 +1,26 @@
+interface IAnimal {
+    void Sonido();
+}
+
+class Perro : IAnimal
+{
+    public void Sonido() {
+        Console.WriteLine("Guau!");
+    }
+}
+
+class NullAnimal : IAnimal {
+    public void Sonido() {
+        
+    }
+}
+
+// Clase principal
+
+static class Programa {
+
+    static void Main() {
+        IAnimal dog = new Perro();
+        dog.Sonido(); // Salida "Guau!"
+    }
+}
