@@ -15,7 +15,7 @@ class NullAnimal : IAnimal {
     }
 }
 
-// Clase principal
+// Clase Main
 
 static class Programa {
 
