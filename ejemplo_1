@@ -1,26 +1,29 @@
-interface IAnimal {
-    void Sonido();
+// Ejemplo en JAVA
+
+abstract class Animal {
+    public abstract void Sonido();  
 }
 
-class Perro : IAnimal
-{
+class Perro extends Animal {
     public void Sonido() {
-        Console.WriteLine("Guau!");
+        System.out.println("Guau!!");
     }
 }
 
-class NullAnimal : IAnimal {
+class NullAnimal extends Animal {
     public void Sonido() {
-        
+        // No se especifica ningún
+        // comportamiento (a propósito)
     }
 }
 
-// Clase Main
-
-static class Programa {
-
-    static void Main() {
-        IAnimal dog = new Perro();
-        dog.Sonido(); // Salida "Guau!"
+public class Metodo_Principal {
+    public static void main(String[] args) {
+        Animal perro = new Perro();
+        perro.Sonido(); // Salida: Guau!!
+        /*
+        Animal desconocido = new NullAnimal();  No genera ninguna salida pero,
+        desconocido.Sonido();                   tampoco producirá una exepción
+        */
     }
 }
