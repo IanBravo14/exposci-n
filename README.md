@@ -1,6 +1,6 @@
 # Patrón de diseño: Null Object
 
-El patrón de diseño Null Object propone utilizar instancias que implementen la interface requerida pero con un cuerpo vacío para así evitar devolver valores nulos y tener que verificar si la instancia de un objeto es nulo o no, para prevenir que se genere un error **NullReferenceException**.
+El patrón de diseño Null Object propone utilizar un objeto especial que cumpla con el tipo de objeto que se desea retornar para cuando el objeto buscado no exista, pero con la particularidad de que este objeto especial tenga todos su métodos vacíos. Esto se hace para evitar tener que verificar que el valor devuelto por el método sea un objeto o un nulo, dado que si es un nulo puede ocasionar un error en tiempo de ejecución *NullReferenceException*.  
 
 ## Estructura
 
