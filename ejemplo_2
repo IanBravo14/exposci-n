@@ -16,7 +16,7 @@ class ClienteReal extends ClienteAbstracto {
 
 class ClienteNulo extends ClienteAbstracto {
     public String getNombre() {
-        return "El cliente no está disponible en la BD";
+        return "El cliente no existe en la BD";
     }
 }
 
@@ -32,7 +32,7 @@ class EncontrarCliente {
    }
 }
 
-public class Metodo_Principal {
+public class Principal {
      public static void main(String[] args) {
        ClienteAbstracto cliente1 = EncontrarCliente.getCliente("Ian");
        ClienteAbstracto cliente2 = EncontrarCliente.getCliente("Nicole");
